@@ -19,7 +19,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: packageName,
-            dependencies: ["FASwiftUI"],
+            dependencies: [packageName],
             url: remoteKotlinUrl,
             checksum: remoteKotlinChecksum
         )
