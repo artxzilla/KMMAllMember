@@ -8,7 +8,7 @@ let packageName = "allshared"
 let package = Package(
     name: packageName,
     platforms: [
-        .iOS(.v13)
+        .iOS(.v12)
     ],
     products: [
         .library(
@@ -19,6 +19,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: packageName,
+            dependencies: ["FASwiftUI"],
             url: remoteKotlinUrl,
             checksum: remoteKotlinChecksum
         )
