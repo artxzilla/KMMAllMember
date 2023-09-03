@@ -1,9 +1,14 @@
 package co.touchlab.kmmbridgekickstart
 
-interface SubscriptionInfoInterface {
-    val subscriptionInfoUrl: String
-        get() = "https://uat.cdn.7eleven.io/7now/subscription-th.html"
+class SubscriptionInfo {
+    private val subscriptionInfoUrl = "https://uat.cdn.7eleven.io/7now/subscription-th.html"
+    private val trueWalletManualUrl = "https://uat.cdn.7eleven.io/7now/true-wallet-manual.html"
 
-    val trueWalletManualUrl: String
-        get() = "https://uat.cdn.7eleven.io/7now/true-wallet-manual.html"
+    fun getSubscriptionInfoUrl(): String {
+        return subscriptionInfoUrl
+    }
+
+    fun getTrueWalletManualUrl(): String {
+        return trueWalletManualUrl
+    }
 }
